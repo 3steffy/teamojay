@@ -1,187 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap');
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-
-background:black;
-
-color:white;
-
-font-family:Arial;
-
-overflow-x:hidden;
-
-text-align:center;
-
+    background:#ffffff;
+    color:#555;
+    font-family:'Crafty Girls', cursive;
+    overflow-x:hidden;
+    text-align:center;
 }
 
 #inicio{
-
-height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-gap:35px;
-
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
 }
 
 .gif{
-
-width:260px;
-
-border-radius:20px;
-
+    width:240px;
+    border-radius:20px;
 }
 
 button{
-
-padding:18px 45px;
-
-font-size:25px;
-
-border:none;
-
-border-radius:50px;
-
-background:#ff5ca8;
-
-color:white;
-
-cursor:pointer;
-
-transition:.3s;
-
-box-shadow:0 0 20px #ff5ca8;
-
+    padding:18px 45px;
+    font-size:24px;
+    border:none;
+    border-radius:50px;
+    background:#ff8fc4;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(255,143,196,.35);
+    font-family:'Crafty Girls', cursive;
 }
 
 button:hover{
-
-transform:scale(1.08);
-
+    transform:scale(1.06);
 }
 
 #contenido{
-
-display:none;
-
-padding:60px 20px;
-
-animation:aparecer 1.5s;
-
+    display:none;
+    padding:60px 20px;
+    animation:aparecer 1.2s;
 }
 
 h1{
-
-font-size:50px;
-
-margin-bottom:30px;
-
-color:#ffcce8;
-
+    font-size:38px;
+    color:#ff74ae;
+    margin-bottom:28px;
+    font-weight:normal;
 }
 
 p{
-
-max-width:900px;
-
-margin:auto;
-
-font-size:22px;
-
-line-height:2;
-
-margin-bottom:55px;
-
+    max-width:900px;
+    margin:auto;
+    font-size:22px;
+    line-height:2;
+    margin-bottom:50px;
+    color:#555;
 }
 
 .imagenes{
-
-display:flex;
-
-justify-content:center;
-
-gap:30px;
-
-flex-wrap:wrap;
-
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
 }
 
 .imagenes img{
-
-width:270px;
-
-height:270px;
-
-object-fit:cover;
-
-border-radius:18px;
-
-border:4px solid white;
-
-transition:.4s;
-
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.35s;
 }
 
 .imagenes img:hover{
-
-transform:scale(1.05);
-
+    transform:scale(1.05);
 }
 
 @keyframes aparecer{
-
-from{
-
-opacity:0;
-
-transform:translateY(40px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 .heart{
-
-position:fixed;
-
-top:-20px;
-
-color:#ff5ca8;
-
-font-size:25px;
-
-animation:caer linear forwards;
-
-pointer-events:none;
-
+    position:fixed;
+    top:-20px;
+    font-size:30px;
+    animation:caer linear forwards;
+    pointer-events:none;
+    user-select:none;
 }
 
 @keyframes caer{
-
-to{
-
-transform:translateY(110vh);
-
-opacity:0;
-
+    to{
+        transform:translateY(110vh);
+        opacity:0;
+    }
 }
+
+@media (max-width:768px){
+
+    .gif{
+        width:180px;
+    }
+
+    button{
+        font-size:20px;
+        padding:15px 35px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    p{
+        font-size:16px;
+        line-height:1.8;
+        padding:0 15px;
+    }
+
+    .imagenes{
+        gap:15px;
+    }
+
+    .imagenes img{
+        width:150px;
+        height:150px;
+    }
 
 }
