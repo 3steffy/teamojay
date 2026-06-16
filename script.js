@@ -22,7 +22,7 @@ const corazon=document.createElement("div");
 
 corazon.classList.add("heart");
 
-corazon.innerHTML="❤";
+corazon.innerHTML = "💗";
 
 corazon.style.left=Math.random()*100+"vw";
 
