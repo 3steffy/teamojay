@@ -145,3 +145,29 @@ p{
     }
 
 }
+
+.final{
+    margin-top:60px;
+    margin-bottom:60px;
+}
+
+.firma{
+    font-size:24px;
+    color:#ff74ae;
+    margin-bottom:25px;
+}
+
+.spotify{
+    display:inline-block;
+    background:#1DB954;
+    color:white;
+    text-decoration:none;
+    padding:15px 28px;
+    border-radius:40px;
+    font-size:20px;
+    transition:.3s;
+}
+
+.spotify:hover{
+    transform:scale(1.05);
+}
