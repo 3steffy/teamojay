@@ -3,35 +3,39 @@ const inicio = document.getElementById("inicio");
 const contenido = document.getElementById("contenido");
 const musica = document.getElementById("musica");
 
-boton.onclick = () => {
+boton.addEventListener("click", () => {
 
     inicio.style.display = "none";
     contenido.style.display = "block";
 
-    musica.play();
+    if (musica) {
+        musica.volume = 0.5;
 
-};
+        musica.play().catch((error) => {
+            console.log("No se pudo reproducir la música:", error);
+        });
+    }
 
-function crearCorazon(){
+});
 
-const corazon=document.createElement("div");
+function crearCorazon() {
 
-corazon.classList.add("heart");
+    const corazon = document.createElement("div");
 
-corazon.innerHTML = "💗";
+    corazon.classList.add("heart");
 
-corazon.style.left=Math.random()*100+"vw";
+    corazon.innerHTML = "💗";
 
-corazon.style.animationDuration=(Math.random()*3+4)+"s";
+    corazon.style.left = Math.random() * 100 + "vw";
 
-document.body.appendChild(corazon);
+    corazon.style.animationDuration = (Math.random() * 3 + 4) + "s";
 
-setTimeout(()=>{
+    document.body.appendChild(corazon);
 
-corazon.remove();
-
-},7000);
+    setTimeout(() => {
+        corazon.remove();
+    }, 7000);
 
 }
 
-setInterval(crearCorazon,250);
+setInterval(crearCorazon, 250);
