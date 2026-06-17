@@ -59,12 +59,13 @@ h1{
 }
 
 p{
+    p{
     max-width:900px;
-    margin:auto;
-    font-size:22px;
-    line-height:2;
-    margin-bottom:50px;
+    margin:0 auto 22px;
+    font-size:18px;
+    line-height:1.9;
     color:#555;
+
 }
 
 .imagenes{
