@@ -1,18 +1,14 @@
-const boton=document.getElementById("abrir");
+const boton = document.getElementById("abrir");
+const inicio = document.getElementById("inicio");
+const contenido = document.getElementById("contenido");
+const musica = document.getElementById("musica");
 
-const inicio=document.getElementById("inicio");
+boton.onclick = () => {
 
-const contenido=document.getElementById("contenido");
+    inicio.style.display = "none";
+    contenido.style.display = "block";
 
-const musica=document.getElementById("musica");
-
-boton.onclick=()=>{
-
-inicio.style.display="none";
-
-contenido.style.display="block";
-
-musica.play();
+    musica.play();
 
 };
 
